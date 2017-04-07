@@ -1,14 +1,17 @@
-<header>
-    <div class="header-section">
-        <div class="header-section-headline">
-            <h1 color="primary">Crisenbery Siding & Continuous Gutters</h1>
-            <h2>A fully insured local exterior home improvement company serving the Tri-State area for over 30 years.</h2>
-        </div>
-    </div>
+<header class="txt-center layout-column layout-align-center-center">
+  <h1 color="primary">Crisenbery Siding & Gutters</h1>
+  <h3>A fully insured local exterior home improvement company serving the Tri-State area for over 30 years.</h3>
 </header>
-<div *ngFor="let r of reviews">
-    <blockquote>
-        <p>{{ r.customer }}</p>
-        <small>{{ r.comment }}</small>
+<div class="p-h-40 m-b-40">
+  <div class="layout-row layout-wrap layout-align-start-start">
+    <blockquote *ngFor="let r of reviews" class="flex-100">
+      <p>{{ r.customer }}</p>
+      <small>{{ r.comment }}</small>
     </blockquote>
+  </div>
 </div>
+<footer>
+  <div class="layout-row layout-wrap layout-align-end-center">
+    <p>Powerd by nbc 2017</p>
+  </div>
+</footer>

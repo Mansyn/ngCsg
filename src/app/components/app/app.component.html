@@ -2,28 +2,29 @@
   <a aria-label="Crisenbery Siding" md-button routerLink="home" class="mat-button">
     <span class="mat-button-wrapper">
     <md-icon class="m-r-5">build</md-icon>
-    <span>CRISENBERY SIDING</span>
+    <span>CRISENBERY</span>
     </span>
     <div class="mat-button-ripple mat-ripple" md-ripple></div>
     <div class="mat-button-focus-overlay"></div>
   </a>
-  <button md-button *ngFor="let link of navLinks" routerLink="{{link.link}}" class="hide-gt-xs">
-        {{link.link | uppercase}}
+  <button md-button *ngFor="let link of navLinks" routerLink="{{link.section}}">
+        {{link.section | uppercase}}
     </button>
 </md-toolbar>
 <section class="flex-container">
   <md-sidenav-container class="sidenav-container" (window:resize)="onResize($event)">
-    <md-sidenav #sidenav class="sidenav" mode="side" opened="true">
-      <nav>
-        <h3>ABOUT</h3>
+    <md-sidenav #sidenav class="sidenav" mode="side" [opened]="isHidden()">
+      <nav *ngFor="let link of navLinks">
+        <h3>{{link.section}}</h3>
         <ul>
-          <li *ngFor="let link of navLinks" routerLink="{{link.link}}">
-            <md-icon class="p-l-5 p-r-10">{{link.icon}}</md-icon>
-            <p class="p-r-5" md-list-item>{{link.link | uppercase}}</p>
+          <li *ngFor="let page of link.pages">
+            <a routerLink="/{{link.section}}/{{page.link}}" class="p-l-15 p-r-15">{{page.link | titleCase}}</a>
           </li>
         </ul>
       </nav>
     </md-sidenav>
-    <router-outlet></router-outlet>
+    <div class="flex layout-column layout-align-start-start">
+      <h1 class="md-display-1 m-40" [hidden]="!isHidden()">{{currentPath()}}</h1>
+      <router-outlet></router-outlet>
+    </div>
   </md-sidenav-container>
-</section>

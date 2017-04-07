@@ -1,0 +1,14 @@
+<header>
+    <div class="header-section">
+        <div class="header-section-headline">
+            <h1 color="primary">Crisenbery Siding & Continuous Gutters</h1>
+            <h2>A fully insured local exterior home improvement company serving the Tri-State area for over 30 years.</h2>
+        </div>
+    </div>
+</header>
+<div *ngFor="let r of reviews">
+    <blockquote>
+        <p>{{ r.customer }}</p>
+        <small>{{ r.comment }}</small>
+    </blockquote>
+</div>

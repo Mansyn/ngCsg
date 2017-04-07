@@ -1,0 +1,29 @@
+<md-toolbar color="primary">
+  <a aria-label="Crisenbery Siding" md-button routerLink="home" class="mat-button">
+    <span class="mat-button-wrapper">
+    <md-icon class="m-r-5">build</md-icon>
+    <span>CRISENBERY SIDING</span>
+    </span>
+    <div class="mat-button-ripple mat-ripple" md-ripple></div>
+    <div class="mat-button-focus-overlay"></div>
+  </a>
+  <button md-button *ngFor="let link of navLinks" routerLink="{{link.link}}" class="hide-gt-xs">
+        {{link.link | uppercase}}
+    </button>
+</md-toolbar>
+<section class="flex-container">
+  <md-sidenav-container class="sidenav-container" (window:resize)="onResize($event)">
+    <md-sidenav #sidenav class="sidenav" mode="side" opened="true">
+      <nav>
+        <h3>ABOUT</h3>
+        <ul>
+          <li *ngFor="let link of navLinks" routerLink="{{link.link}}">
+            <md-icon class="p-l-5 p-r-10">{{link.icon}}</md-icon>
+            <p class="p-r-5" md-list-item>{{link.link | uppercase}}</p>
+          </li>
+        </ul>
+      </nav>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+  </md-sidenav-container>
+</section>

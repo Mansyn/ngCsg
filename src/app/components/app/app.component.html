@@ -1,12 +1,7 @@
 <md-toolbar color="primary">
-  <a aria-label="Crisenbery Siding" md-button routerLink="home" class="mat-button">
-    <span class="mat-button-wrapper">
-    <md-icon class="m-r-5">build</md-icon>
-    <span>CRISENBERY</span>
-    </span>
-    <div class="mat-button-ripple mat-ripple" md-ripple></div>
-    <div class="mat-button-focus-overlay"></div>
-  </a>
+  <button md-button routerLink="home">
+        CS&G
+    </button>
   <button md-button *ngFor="let link of navLinks" routerLink="{{link.section}}">
         {{link.section | uppercase}}
     </button>
@@ -24,7 +19,14 @@
       </nav>
     </md-sidenav>
     <div class="flex layout-column layout-align-start-start">
-      <h1 class="md-display-1 m-40" [hidden]="!isHidden()">{{currentPath()}}</h1>
+      <div class="w-100" [hidden]="!isHidden()">
+        <md-toolbar color="accent">
+          <div *ngFor="let part of currentPath(); let last = last">
+            {{part | uppercase}}
+            <md-icon *ngIf="!last">chevron_right</md-icon>
+          </div>
+        </md-toolbar>
+      </div>
       <router-outlet></router-outlet>
     </div>
   </md-sidenav-container>

@@ -49,8 +49,8 @@ export class AppComponent {
   public currentPath() {
     var fullPath = this.router.url;
     var pathTxt = fullPath.replace('/', '');
-    pathTxt = pathTxt.replace('/', ' > ');
-    return pathTxt.toUpperCase();
+
+    return pathTxt.split('/');
   }
 
   onResize(event) {

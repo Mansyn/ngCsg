@@ -112,3 +112,7 @@
     background: #fafafa;
     color: mat-color($primary);
   }
+
+  md-toolbar md-icon {
+    vertical-align: text-top;
+  }

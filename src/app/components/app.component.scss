@@ -1,4 +1,4 @@
-  @import "../../../theme";
+  @import "../../theme";
    :host {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -17,6 +17,10 @@
     display: block;
     overflow: hidden;
     width: 100%;
+  }
+
+  .mat-toolbar-row>.mat-button:last-child {
+    margin-left: auto;
   }
 
   md-sidenav {
@@ -111,8 +115,4 @@
   .sidenav li>a:hover {
     background: #fafafa;
     color: mat-color($primary);
-  }
-
-  md-toolbar md-icon {
-    vertical-align: text-top;
   }

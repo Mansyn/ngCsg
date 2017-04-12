@@ -8,11 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
 // components
-import { AppComponent } from './components/app/app.component';
+import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { BusinessComponent } from './components/about/business/business.component';
-import { EstimatesComponent } from './components/about/estimates/estimates.component';
+import { FaqComponent } from './components/about/faq/faq.component';
+import { TestimonialsComponent } from './components/about/testimonials/testimonials.component';
 import { ServicesComponent } from './components/about/services/services.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HousesComponent } from './components/gallery/houses/houses.component';
@@ -31,8 +31,8 @@ import { TitleCase } from './pipes/title-case.pipe';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    BusinessComponent,
-    EstimatesComponent,
+    FaqComponent,
+    TestimonialsComponent,
     ServicesComponent,
     GalleryComponent,
     HousesComponent,
@@ -51,8 +51,8 @@ import { TitleCase } from './pipes/title-case.pipe';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'about/business', component: BusinessComponent },
-      { path: 'about/estimates', component: EstimatesComponent },
+      { path: 'about/faq', component: FaqComponent },
+      { path: 'about/testimonials', component: TestimonialsComponent },
       { path: 'about/services', component: ServicesComponent },
       { path: 'gallery', component: GalleryComponent },
       { path: 'gallery/houses', component: HousesComponent },

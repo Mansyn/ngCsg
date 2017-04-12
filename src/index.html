@@ -8,6 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
@@ -15,7 +16,27 @@
 </head>
 
 <body>
-  <app-root>Loading...</app-root>
+  <app-root>
+    <div style="width: 100%;
+      padding: 0;
+      display: table !important;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;">
+      <div style="padding: 0;
+        vertical-align: middle;
+        display: table-cell !important;
+        margin: 0;
+        text-align: center;">
+        <div class="spinner" style="height: 80px;">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+  </app-root>
 </body>
 
 </html>

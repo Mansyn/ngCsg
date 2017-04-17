@@ -13,26 +13,39 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans">
 </head>
 
 <body>
   <app-root>
-    <div style="width: 100%;
-      padding: 0;
-      display: table !important;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 0;">
-      <div style="padding: 0;
+    <style>
+      .container {
+        width: 100%;
+        padding: 0;
+        display: table !important;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+
+      .pane {
+        padding: 0;
         vertical-align: middle;
         display: table-cell !important;
         margin: 0;
-        text-align: center;">
-        <div class="spinner" style="height: 80px;">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
+        text-align: center;
+      }
+
+    </style>
+    <div class="container">
+      <div class="pane">
+        <div class="sk-folding-cube" style="height: 80px; width: 80px;">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
         </div>
       </div>
     </div>

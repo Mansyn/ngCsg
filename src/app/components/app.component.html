@@ -1,6 +1,6 @@
-<md-toolbar color="primary">
-  <button md-button routerLink="home">
-        CS&G
+<md-toolbar color="primary" class="header">
+  <button md-button class="txt-bold" routerLink="home">
+        HOME
     </button>
   <button md-button *ngFor="let link of navLinks" routerLink="{{link.section}}">
         {{link.section | uppercase}}
@@ -18,7 +18,7 @@
         </ul>
       </nav>
     </md-sidenav>
-    <div class="flex layout-column layout-align-start-start">
+    <div class="flex layout-column layout-align-start-start body-container">
       <div class="w-100" [hidden]="isHidden()">
         <md-toolbar color="accent">
           <div class="m-r-15 hide show-gt-xs">
@@ -33,5 +33,10 @@
         </md-toolbar>
       </div>
       <router-outlet></router-outlet>
+      <footer>
+        <div class="layout-row layout-align-end-center m-h-20">
+          <h5>Powerd by Unleashed Development 2017</h5>
+        </div>
+      </footer>
     </div>
   </md-sidenav-container>

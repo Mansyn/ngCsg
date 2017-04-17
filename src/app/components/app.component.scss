@@ -27,6 +27,14 @@
     background-color: #fff !important;
   }
 
+  .header button {
+    font-weight: bold;
+  }
+
+  footer {
+    background-color: mat-color($accent);
+  }
+
   .sidenav {
     background-color: mat-color($accent);
     width: 100%;
@@ -115,4 +123,22 @@
   .sidenav li>a:hover {
     background: #fafafa;
     color: mat-color($primary);
+  }
+
+  .body-container {
+    min-height: 100%;
+  }
+
+  .body-container>*:nth-child(3) {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  footer {
+    width: 100%;
   }

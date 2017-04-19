@@ -35,6 +35,10 @@
     background-color: mat-color($accent);
   }
 
+  footer h5 {
+    margin: 0;
+  }
+
   .sidenav {
     background-color: mat-color($accent);
     width: 100%;

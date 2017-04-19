@@ -9,7 +9,6 @@
   }
 
   header>div {
-    background-color: mat-color($primary);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23757575' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 1)), color-stop(0.65, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
   }
@@ -29,7 +28,7 @@
   .headline {}
 
   .frame-container {
-    background-color: mat-color($accent);
+    background-color: #000;
   }
 
   .frame {
@@ -44,20 +43,35 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: -webkit-linear-gradient(left, rgba(117, 117, 117, 1) 0%, rgba(117, 117, 117, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(117, 117, 117, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%);
   }
 
   .spacer {
-    min-height: 35px;
+    min-height: 30px;
     background-color: mat-color($primary);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23757575' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
   }
 
   blockquote:nth-child(odd) {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
-    border-left: 5px solid mat-color($accent);
+    border-left: 6px solid mat-color($accent);
+    border-radius: 12px;
   }
 
   blockquote:nth-child(even) {
@@ -67,17 +81,17 @@
     padding-right: 15px;
     padding-left: 0;
     text-align: right;
-    border-right: 5px solid mat-color($accent);
+    border-right: 6px solid mat-color($accent);
+    border-radius: 12px;
   }
 
-  blockquote p {
+  blockquote h3 {
     margin: 0 0 10px
   }
 
-  blockquote small {
+  blockquote p {
     display: block;
-    font-size: 80%;
-    line-height: 1.42857143;
+    margin: 0;
     color: #777;
   }
 

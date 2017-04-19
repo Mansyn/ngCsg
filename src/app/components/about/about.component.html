@@ -1,9 +1,9 @@
-<div class="flex layout-row layout-align-start-start layout-wrap p-20">
+<div class="p-20">
   <h1>
-    Superior Choice for Roofing in Cincinnati OH
+    Superior Choice for Exterior Home Improvement Projects
   </h1>
   <p>
-    Crisenbery Siding &amp; Gutters is a local, family-owned business serving Cincinnati, Dayton, and the Tri-State area for 28 years specializing in a wide variety of exterior renovations.
+    <img src="/assets/images/truck1-min.jpg" style="float:right;margin:0 0 10px 10px!important;"> Crisenbery Siding &amp; Gutters is a local, family-owned business serving Cincinnati, Dayton, and the Tri-State area for over 30 years specializing in a wide variety of exterior renovations.
   </p>
   <p>
     Crisenbery Siding does not use subcontractors. The owner is on every job from start to finish, holding us to a higher standard. Crisenbery Siding offers a wide range of materials and styles, and can design and install any exterior that is appropriate for your home's architectural style and your budget.
@@ -14,21 +14,23 @@
   <p>
     If you own a home or business and are in need of quality exterior renovations, Crisenbery Siding has the solutions to all of your needs. We are the siding and gutter experts Cincinnati residents count on for everything from residential gutter repairs to commercial siding replacement. We offer a satisfaction garrantee. Give us a call today at (513) 638-6680 and find out why Crisenbery Siding is your top choice for roofing contractor in Cincinnati and beyond!
   </p>
-  <div class="flex-100 flex-gt-xs-50 flex-gt-sm-33 p-t-20" *ngFor="let page of section.pages">
-    <md-card class="m-h-20">
-      <md-card-header>
-        <md-card-title>{{page.link | titleCase}}</md-card-title>
-        <md-card-subtitle>{{page.headline}}</md-card-subtitle>
-      </md-card-header>
-      <img md-card-image src="/assets/{{section.section}}-{{page.link}}.png">
-      <md-card-content>
-        <p>
-          {{page.summary}}
-        </p>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
-      </md-card-actions>
-    </md-card>
+  <div class="layout-row layout-wrap m-b-20">
+    <div class="flex-100 flex-gt-xs-50 flex-gt-sm-33 p-t-20" *ngFor="let page of section.pages">
+      <md-card class="m-h-20">
+        <md-card-header>
+          <md-card-title>{{page.link | uppercase}}</md-card-title>
+          <md-card-subtitle>{{page.headline}}</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="/assets/images/{{section.section}}-{{page.link}}.png">
+        <md-card-content>
+          <p>
+            {{page.summary}}
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
+        </md-card-actions>
+      </md-card>
+    </div>
   </div>
 </div>

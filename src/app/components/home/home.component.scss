@@ -16,19 +16,20 @@
   header h1 {
     font-weight: 700;
     font-size: 5em;
-    margin: 15px;
+    margin: 0;
     text-shadow: mat-color($accent) 1px 1px 4px;
   }
 
-  header h2 {
+  header h3 {
     letter-spacing: .025em;
-    font-size: 28px;
+    margin: 0;
+    font-weight: 500;
   }
 
   .headline {}
 
   .frame-container {
-    background-color: #000;
+    background-color: #757575;
   }
 
   .frame {
@@ -43,7 +44,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(117, 117, 117, 1) 0%, rgba(117, 117, 117, 0) 20%, rgba(117, 117, 117, 0) 80%, rgba(117, 117, 117, 1) 100%);
   }
 
   .spacer {

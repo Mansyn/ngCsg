@@ -15,7 +15,7 @@ import { FaqComponent } from './components/about/faq/faq.component';
 import { TestimonialsComponent } from './components/about/testimonials/testimonials.component';
 import { ServicesComponent } from './components/about/services/services.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { HousesComponent } from './components/gallery/houses/houses.component';
+import { SidingComponent } from './components/gallery/siding/siding.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CallComponent } from './components/contact/call/call.component';
 import { EmailComponent } from './components/contact/email/email.component';
@@ -35,7 +35,7 @@ import { TitleCase } from './pipes/title-case.pipe';
     TestimonialsComponent,
     ServicesComponent,
     GalleryComponent,
-    HousesComponent,
+    SidingComponent,
     ContactComponent,
     CallComponent,
     EmailComponent,
@@ -55,7 +55,7 @@ import { TitleCase } from './pipes/title-case.pipe';
       { path: 'about/testimonials', component: TestimonialsComponent },
       { path: 'about/services', component: ServicesComponent },
       { path: 'gallery', component: GalleryComponent },
-      { path: 'gallery/houses', component: HousesComponent },
+      { path: 'gallery/siding', component: SidingComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'contact/call', component: CallComponent },
       { path: 'contact/email', component: EmailComponent },

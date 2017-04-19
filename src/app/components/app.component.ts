@@ -30,9 +30,9 @@ export class AppComponent {
   }, {
     'section': 'gallery',
     'pages': [{
-      'link': 'houses',
-      'headline': 'House Gallery',
-      'summary': 'frequently asked questions about home exteriors'
+      'link': 'siding',
+      'headline': 'Siding Gallery',
+      'summary': 'view some of our previous siding work'
     }]
   }, {
     'section': 'contact',

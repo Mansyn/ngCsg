@@ -31,14 +31,6 @@
     font-weight: bold;
   }
 
-  footer {
-    background-color: mat-color($accent);
-  }
-
-  footer h5 {
-    margin: 0;
-  }
-
   .sidenav {
     background-color: mat-color($accent);
     width: 100%;
@@ -143,6 +135,58 @@
     display: flex
   }
 
+  .wrap {
+    position: relative;
+  }
+
+  .wrap:after {
+    font-family: 'Material Icons';
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 400px;
+    color: #eee;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -200px;
+    z-index: -1;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
+
   footer {
     width: 100%;
+    background-color: mat-color($accent);
+  }
+
+  footer p {
+    margin: .1em 0;
+  }
+
+  .mat-card.section {}
+
+  .mat-card.section .mat-card-content {
+    text-align: center;
+  }
+
+  .mat-card.section .mat-card-content figure {
+    display: inline-block;
+    width: 146px;
+    height: 146px;
+    background: mat-color($primary);
+    text-align: center;
+    -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  }
+
+  .mat-card.section .mat-card-content figure .mat-icon {
+    color: white;
+    font-size: 90px;
+    height: 90px;
+    width: 90px;
+    min-height: 90px;
+    min-width: 90px;
+    padding: 28px;
   }

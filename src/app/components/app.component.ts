@@ -16,14 +16,17 @@ export class AppComponent {
     'section': 'about',
     'pages': [{
       'link': 'faq',
+      'icon': 'question_answer',
       'headline': 'Frequently Asked Questions',
       'summary': 'Frequently asked questions about home exteriors'
     }, {
       'link': 'services',
+      'icon': 'touch_app',
       'headline': 'Our Services',
       'summary': 'What services we can offer for your home'
     }, {
       'link': 'testimonials',
+      'icon': 'thumb_up',
       'headline': 'Client Testimonials',
       'summary': 'What our past clients have to say about our work'
     }]
@@ -31,6 +34,7 @@ export class AppComponent {
     'section': 'gallery',
     'pages': [{
       'link': 'siding',
+      'icon': 'gallery',
       'headline': 'Siding Gallery',
       'summary': 'view some of our previous siding work'
     }]
@@ -38,14 +42,17 @@ export class AppComponent {
     'section': 'contact',
     'pages': [{
       'link': 'call',
+      'icon': 'phone',
       'headline': 'Contact By Phone',
       'summary': 'frequently asked questions about home exteriors'
     }, {
       'link': 'email',
+      'icon': 'email',
       'headline': 'Contact By Email',
       'summary': 'frequently asked questions about home exteriors'
     }, {
       'link': 'facebook',
+      'icon': 'question_answer',
       'headline': 'On Facebook',
       'summary': 'Find us on Facebook and keep up with our latest work'
     }]
@@ -68,7 +75,7 @@ export class AppComponent {
   }
 
   onResize(event) {
-    if ((this.router.url === '/home') || (event.target.innerWidth < 600)) {
+    if ((this.router.url === '/home') || (event.target.innerWidth < 800)) {
       this.sidenav.close();
     }
   }

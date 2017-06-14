@@ -4,7 +4,7 @@ import { AppComponent } from '../app.component';
 
 @Component({
     selector: 'contact',
-    template: require('./contact.component.html')
+    templateUrl: './contact.component.html'
 })
 export class ContactComponent {
     constructor(private app: AppComponent) {

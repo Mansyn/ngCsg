@@ -8,7 +8,7 @@ import { AppComponent } from '../app.component';
 })
 export class ContactComponent {
     constructor(private app: AppComponent) {
-        if (window.screen.width > 960) {
+        if (window.innerWidth > 960) {
             app.sidenav.open();
         }
     }

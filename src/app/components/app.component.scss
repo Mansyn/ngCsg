@@ -121,6 +121,14 @@
     color: mat-color($primary);
   }
 
+  .spacer {
+    min-height: 40px;
+    background-color: mat-color($primary);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23757575' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    border-top: 1px solid mat-color($accent);
+    border-bottom: 1px solid mat-color($accent);
+  }
+
   .body-container {
     min-height: 100%;
   }
@@ -161,8 +169,14 @@
     background-color: mat-color($accent);
   }
 
-  footer p {
-    margin: 0;
+  footer>div {
+    align-items: center;
+  }
+
+  footer .logo {
+    font-size: 33px;
+    line-height: 33px;
+    font-weight: bold;
   }
 
   .mat-card.section {}
@@ -196,7 +210,7 @@
       font-size: 3em !important;
     }
     header h3 {
-      font-size: 1em !important;
+      font-size: 2em !important;
     }
   }
 
@@ -204,10 +218,10 @@
 
   @media (min-width: 600px) and (max-width: 959px) {
     header h1 {
-      font-size: 4em !important;
+      font-size: 3.5em !important;
     }
     header h3 {
-      font-size: 1.4em !important;
+      font-size: 2.25em !important;
     }
   }
 
@@ -215,10 +229,10 @@
 
   @media (min-width: 960px) and (max-width: 1279px) {
     header h1 {
-      font-size: 5em !important;
+      font-size: 4em !important;
     }
     header h3 {
-      font-size: 1.7em !important;
+      font-size: 2.5em !important;
     }
   }
 
@@ -226,18 +240,18 @@
 
   @media (min-width: 1280px) and (max-width: 1919px) {
     header h1 {
-      font-size: 5.5em !important;
+      font-size: 5em !important;
     }
     header h3 {
-      font-size: 2.1em !important;
+      font-size: 3em !important;
     }
   }
 
   @media (min-width: 1920px) {
     header h1 {
-      font-size: 6em !important;
+      font-size: 5.5em !important;
     }
     header h3 {
-      font-size: 2.4em !important;
+      font-size: 3.5em !important;
     }
   }

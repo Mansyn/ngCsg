@@ -10,7 +10,7 @@ import { AppComponent } from '../app.component';
 export class AboutComponent {
     section: any;
     constructor(private app: AppComponent) {
-        if (window.screen.width > 960) {
+        if (window.innerWidth > 960) {
             app.sidenav.open();
         }
 

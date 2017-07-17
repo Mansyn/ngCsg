@@ -10,7 +10,7 @@ import { AppComponent } from '../app.component';
 export class GalleryComponent {
     section: any;
     constructor(private app: AppComponent) {
-        if (window.screen.width > 960) {
+        if (window.innerWidth > 960) {
             app.sidenav.open();
         }
 

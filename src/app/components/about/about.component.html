@@ -1,38 +1,43 @@
-<div class="p-20">
-  <h1 class="txt-center md-headline">
-    Superior Choice for Exterior Home Improvement Projects
-  </h1>
-  <p class="md-body-1">
-    Crisenbery Siding &amp; Gutters is a local, family-owned business serving Cincinnati, Dayton, and the Tri-State area for over 30 years specializing in a wide variety of exterior renovations.
-  </p>
-  <p class="md-body-1">
-    Crisenbery Siding does not use subcontractors. The owner is on every job from start to finish, holding us to a higher standard. Crisenbery Siding offers a wide range of materials and styles, and can design and install any exterior that is appropriate for your home's architectural style and your budget.
-  </p>
-  <p class="md-body-1">
-    At Crisenbery Siding, building a relationship with our clients is just as important as building your home. We strive to make both as durable and lasting as we can. Whether we are working on a large commercial property or a single-family home, we offer personalized, courteous service that matches the exceptional quality of our work. We partner with some of our nation's top producers of exterior materials, including Mastic, Fypon, and Azek, in order to ensure that our clients receive the latest and greatest in exterior materials and installation techniques.
-  </p>
-  <p class="md-body-1">
-    If you own a home or business and are in need of quality exterior renovations, Crisenbery Siding has the solutions to all of your needs. We are the siding and gutter experts Cincinnati residents count on for everything from residential gutter repairs to commercial siding replacement. We offer a satisfaction garrantee. Give us a call today at (513) 638-6680 and find out why Crisenbery Siding is your top choice for roofing contractor in Cincinnati and beyond!
-  </p>
-  <div class="layout-row layout-wrap m-b-20">
-    <div class="flex-100 flex-gt-xs-50 flex-gt-md-33 p-t-20" *ngFor="let page of section.pages">
-      <md-card class="m-h-20 section">
-        <md-card-header>
-          <md-card-title>{{page.link | uppercase}}</md-card-title>
-          <md-card-subtitle>{{page.headline}}</md-card-subtitle>
-        </md-card-header>
-        <md-card-content>
-          <figure>
-            <md-icon>{{page.icon}}</md-icon>
-          </figure>
-          <p>
-            {{page.summary}}
-          </p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
-        </md-card-actions>
-      </md-card>
+<section class="layout-row p-h-40 m-v-40">
+  <div>
+    <h2 class="mat-title bahiana">
+      Superior Choice for Exterior Home Improvement Projects
+    </h2>
+    <p class="mat-body-2">
+      Crisenbery Siding &amp; Gutters is a local, family-owned business serving Cincinnati, Dayton, and the Tri-State area for over 30 years specializing in a wide variety of exterior renovations.
+    </p>
+    <p class="mat-body-2">
+      Crisenbery Siding does not use subcontractors. The owner is on every job from start to finish, holding us to a higher standard. Crisenbery Siding offers a wide range of materials and styles, and can design and install any exterior that is appropriate for your home's architectural style and your budget.
+    </p>
+    <p class="mat-body-2">
+      At Crisenbery Siding, building a relationship with our clients is just as important as building your home. We strive to make both as durable and lasting as we can. Whether we are working on a large commercial property or a single-family home, we offer personalized, courteous service that matches the exceptional quality of our work. We partner with some of our nation's top producers of exterior materials, including Mastic, Fypon, and Azek, in order to ensure that our clients receive the latest and greatest in exterior materials and installation techniques.
+    </p>
+    <h2 class="mat-title bahiana">
+      FREE ESTIMATE ON RENOVATIONS AND ROOFING IN LEBANON, CINCINNATI, &amp; BEYOND!
+    </h2>
+    <p class="mat-body-2">
+      If you own a home or business and are in need of quality exterior renovations, Crisenbery Siding has the solutions to all of your needs. We are the siding and gutter experts Cincinnati residents count on for everything from residential gutter repairs to commercial siding replacement. We offer a satisfaction garrantee. Give us a call today at (513) 638-6680 and find out why Crisenbery Siding is your top choice for roofing contractor in Cincinnati and beyond!
+    </p>
+    <div class="layout-row layout-wrap m-b-20">
+      <div class="flex-100 flex-gt-xs-50 flex-gt-md-33 p-t-20" *ngFor="let page of section.pages">
+        <md-card class="m-h-20 section">
+          <md-card-header>
+            <md-card-title>{{page.link | uppercase}}</md-card-title>
+            <md-card-subtitle>{{page.headline}}</md-card-subtitle>
+          </md-card-header>
+          <md-card-content>
+            <figure>
+              <md-icon>{{page.icon}}</md-icon>
+            </figure>
+            <p>
+              {{page.summary}}
+            </p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
+          </md-card-actions>
+        </md-card>
+      </div>
     </div>
   </div>
-</div>
+</section>

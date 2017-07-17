@@ -75,8 +75,14 @@ export class AppComponent {
   }
 
   onResize(event) {
-    if ((this.router.url === '/home') || (event.target.innerWidth < 800)) {
+    if ((this.router.url === '/home')) {
       this.sidenav.close();
+    }
+    if (event.target.innerWidth < 800) {
+      this.sidenav.close();
+      this.sidenav.mode = 'over';
+    } else {
+      this.sidenav.mode = 'side';
     }
   }
 }

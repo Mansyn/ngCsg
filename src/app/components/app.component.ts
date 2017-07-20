@@ -34,9 +34,9 @@ export class AppComponent {
     'section': 'gallery',
     'pages': [{
       'link': 'siding',
-      'icon': 'gallery',
+      'icon': 'view_carousel',
       'headline': 'Siding Gallery',
-      'summary': 'view some of our previous siding work'
+      'summary': 'View some of our previous siding work'
     }]
   }, {
     'section': 'contact',
@@ -44,15 +44,15 @@ export class AppComponent {
       'link': 'call',
       'icon': 'phone',
       'headline': 'Contact By Phone',
-      'summary': 'frequently asked questions about home exteriors'
+      'summary': 'Why not call us now?'
     }, {
       'link': 'email',
       'icon': 'email',
       'headline': 'Contact By Email',
-      'summary': 'frequently asked questions about home exteriors'
+      'summary': 'Send us a message and we will contact you'
     }, {
       'link': 'facebook',
-      'icon': 'question_answer',
+      'icon': 'face',
       'headline': 'On Facebook',
       'summary': 'Find us on Facebook and keep up with our latest work'
     }]
@@ -75,8 +75,14 @@ export class AppComponent {
   }
 
   onResize(event) {
-    if ((this.router.url === '/home') || (event.target.innerWidth < 800)) {
+    if ((this.router.url === '/home')) {
       this.sidenav.close();
+    }
+    if (event.target.innerWidth < 800) {
+      this.sidenav.close();
+      this.sidenav.mode = 'over';
+    } else {
+      this.sidenav.mode = 'side';
     }
   }
 }

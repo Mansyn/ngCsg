@@ -1,14 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng-csg"
+    "name": "ng-proto"
   },
   "apps": [{
     "root": "src",
     "outDir": "dist",
     "assets": [
       "assets",
-      "favicon.ico"
+      "web.config"
     ],
     "index": "index.html",
     "main": "main.ts",
@@ -50,7 +50,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }

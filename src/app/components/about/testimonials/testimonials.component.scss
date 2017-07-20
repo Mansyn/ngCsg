@@ -1,3 +1,33 @@
-.wrap:after {
-  content: 'thumb_up';
-}
+ @import "../../../../theme";
+ .wrap:after {
+   content: 'thumb_up';
+ }
+
+ blockquote:nth-child(odd) {
+   padding: 10px 20px;
+   margin: 0 0 30px;
+   text-align: left;
+   border-left: 6px solid mat-color($accent);
+   border-radius: 12px;
+ }
+
+ blockquote:nth-child(even) {
+   padding: 10px 20px;
+   margin: 0 0 30px;
+   padding-right: 15px;
+   padding-left: 0;
+   text-align: right;
+   border-right: 6px solid mat-color($accent);
+   border-radius: 12px;
+ }
+
+ blockquote h2 {
+   font-size: 1.6em !important;
+   margin-bottom: 5px !important;
+ }
+
+ blockquote p {
+   display: block;
+   margin: 0;
+   color: #777;
+ }

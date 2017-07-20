@@ -4,13 +4,12 @@ import { AppComponent } from '../app.component';
 
 @Component({
     selector: 'about',
-    templateUrl: './about.component.html',
-    styleUrls: ['./about.component.scss']
+    templateUrl: './about.component.html'
 })
 export class AboutComponent {
     section: any;
     constructor(private app: AppComponent) {
-        if (window.screen.width > 960) {
+        if (window.innerWidth > 960) {
             app.sidenav.open();
         }
 

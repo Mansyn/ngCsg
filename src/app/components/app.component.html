@@ -21,7 +21,7 @@
     <div class="flex layout-column layout-align-start-start body-container">
       <div class="w-100" [hidden]="isHidden()">
         <md-toolbar color="accent">
-          <div class="m-r-15 hide show-gt-xs">
+          <div class="m-r-15">
             <button md-mini-fab color="primary" (click)="sidenav.toggle()">
               <md-icon>menu</md-icon>
             </button>
@@ -34,17 +34,15 @@
       </div>
       <router-outlet></router-outlet>
       <footer>
-        <div class="layout-column layout-gt-xs-row layout-padding m-h-20">
-          <div class="flex layout-column">
-            <p class="md-caption">Crisenbery Siding &amp; Gutters</p>
-            <p class="md-caption">Give us a call today!</p>
-            <p class="md-caption">Hours: Monday &mdash; Saturday 8am &ndash; 5:30pm</p>
+        <div class="layout-column layout-gt-xs-row">
+          <div class="flex-15 p-15">
+            <span class="logo cream">CSG</span>
           </div>
-          <div class="flex"></div>
-          <div class="flex layout-column txt-right">
-            <p class="md-caption">142 Falcon Hill Way, Wilmington, OH 45177</p>
-            <p class="md-caption">513-932-6680</p>
-            <p class="md-caption">Copyright &copy; 2017 Crisenbery Siding, All rights reserved.</p>
+          <div class="flex-25">
+            513-932-6680 &mdash; Call us today!
+          </div>
+          <div class="flex-60 txt-right p-15">
+            Copyright &copy; 2017 Crisenbery Siding, All rights reserved
           </div>
         </div>
       </footer>

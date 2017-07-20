@@ -1,24 +1,34 @@
-<div class="p-20">
-  <h1>Take a look at some of the high quality projects we have completed in your area</h1>
-  <p>At Crisenbery Siding &amp; Gutters we take great pride in every project we complete. From installing new gutters in Lebanon, to repairing siding in Mason, to doing amazing trim work in Indian Hill, we love improving the homes and businesses of our neighbors.</p>
-  <p>Select the type of service you are interested in to see examples of our past work.</p>
-  <div class="layout-row layout-wrap m-b-20">
-    <div class="flex-100 flex-gt-xs-50 flex-gt-sm-33 p-t-20" *ngFor="let page of section.pages">
-      <md-card class="m-h-20">
-        <md-card-header>
-          <md-card-title>{{page.link | uppercase}}</md-card-title>
-          <md-card-subtitle>{{page.headline}}</md-card-subtitle>
-        </md-card-header>
-        <img md-card-image src="/assets/images/{{section.section}}-{{page.link}}-min.png">
-        <md-card-content>
-          <p>
-            {{page.summary}}
-          </p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
-        </md-card-actions>
-      </md-card>
+<section class="layout-row p-h-40 m-v-40">
+  <div class="mat-body-2">
+    <h2 class="mat-title allan">
+      Take a look at some of the high quality projects we have completed in your area
+    </h2>
+    <p>
+      At Crisenbery Siding &amp; Gutters we take great pride in every project we complete. From installing new gutters in Lebanon, to repairing siding in Mason, to doing amazing trim work in Indian Hill, we love improving the homes and businesses of our neighbors.
+    </p>
+    <p>
+      Select the type of service to see examples of our past work.
+    </p>
+    <div class="layout-row layout-wrap m-b-20">
+      <div class="flex-100 flex-gt-xs-50 flex-gt-md-33 p-t-20" *ngFor="let page of section.pages">
+        <md-card class="m-h-20 section">
+          <md-card-header>
+            <md-card-title>{{page.link | uppercase}}</md-card-title>
+            <md-card-subtitle>{{page.headline}}</md-card-subtitle>
+          </md-card-header>
+          <md-card-content>
+            <figure>
+              <md-icon>{{page.icon}}</md-icon>
+            </figure>
+            <p>
+              {{page.summary}}
+            </p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
+          </md-card-actions>
+        </md-card>
+      </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,3 +1,28 @@
-<div class="m-h-40">
-  <p>some contact</p>
-</div>
+<section class="layout-row p-h-40 m-v-40">
+  <div class="mat-body-2">
+    <h2 class="mat-title allan">
+      Contact us at Crisenbery Siding today, or follow us online
+    </h2>
+    <div class="layout-row layout-wrap m-b-20">
+      <div class="flex-100 flex-gt-xs-50 flex-gt-md-33 p-t-20" *ngFor="let page of section.pages">
+        <md-card class="m-h-20 section">
+          <md-card-header>
+            <md-card-title>{{page.link | uppercase}}</md-card-title>
+            <md-card-subtitle>{{page.headline}}</md-card-subtitle>
+          </md-card-header>
+          <md-card-content>
+            <figure>
+              <md-icon>{{page.icon}}</md-icon>
+            </figure>
+            <p>
+              {{page.summary}}
+            </p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button routerLink="/{{section.section}}/{{page.link}}">MORE</button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</section>

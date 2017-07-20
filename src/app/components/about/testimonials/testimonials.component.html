@@ -1,10 +1,15 @@
-<div class="wrap">
-  <div class="inner p-20">
-    <p>
-      Crisenbery Siding &amp; Gutters is a local, family-owned business serving Cincinnati, Dayton, and the Tri-State area for over 30 years specializing in a wide variety of exterior renovations.
-    </p>
-    <p>
-      Crisenbery Siding does not use subcontractors. The owner is on every job from start to finish, holding us to a higher standard. Crisenbery Siding offers a wide range of materials and styles, and can design and install any exterior that is appropriate for your home's architectural style and your budget.
-    </p>
+<section class="layout-row wrap p-h-40 m-v-40">
+  <div>
+    <h2 class="mat-title allan">
+      {{page.summary}}
+    </h2>
+    <div class="m-t-40">
+      <div class="layout-row layout-wrap layout-align-start-start">
+        <blockquote *ngFor="let r of reviews" class="flex-100 flex-gt-sm-50">
+          <h2 class="mat-title allan">{{ r.customer }}</h2>
+          <span class="mat-body-2">{{ r.comment }}</span>
+        </blockquote>
+      </div>
+    </div>
   </div>
-</div>
+</section>

@@ -4,8 +4,8 @@ import { AppComponent } from '../../app.component';
 
 @Component({
     selector: 'faq',
-    template: require('./faq.component.html'),
-    styles: [require('./faq.component.scss')]
+    templateUrl: './faq.component.html',
+    styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent {
     section: any;

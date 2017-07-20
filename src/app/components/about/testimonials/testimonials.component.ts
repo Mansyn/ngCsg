@@ -8,8 +8,8 @@ import { AppComponent } from '../../app.component';
 
 @Component({
     selector: 'testimonials',
-    template: require('./testimonials.component.html'),
-    styles: [require('./testimonials.component.scss')]
+    templateUrl: './testimonials.component.html',
+    styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent implements OnInit {
     section: any;

@@ -4,8 +4,8 @@ import { AppComponent } from '../app.component';
 
 @Component({
     selector: 'gallery',
-    template: require('./gallery.component.html'),
-    styles: [require('./gallery.component.scss')]
+    templateUrl: './gallery.component.html',
+    styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent {
     section: any;

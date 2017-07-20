@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'call',
-    template: require('./call.component.html')
+    templateUrl: './call.component.html'
 })
 export class CallComponent { }

@@ -4,8 +4,8 @@ import { AppComponent } from '../../app.component';
 
 @Component({
     selector: 'services',
-    template: require('./services.component.html'),
-    styles: [require('./services.component.scss')]
+    templateUrl: './services.component.html',
+    styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent {
     section: any;

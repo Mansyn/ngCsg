@@ -6,7 +6,6 @@
  blockquote:nth-child(odd) {
    padding: 10px 20px;
    margin: 0 0 30px;
-   font-size: 17.5px;
    text-align: left;
    border-left: 6px solid mat-color($accent);
    border-radius: 12px;
@@ -15,7 +14,6 @@
  blockquote:nth-child(even) {
    padding: 10px 20px;
    margin: 0 0 30px;
-   font-size: 17.5px;
    padding-right: 15px;
    padding-left: 0;
    text-align: right;
@@ -24,7 +22,7 @@
  }
 
  blockquote h2 {
-   font-size: 2em !important;
+   font-size: 1.6em !important;
    margin-bottom: 5px !important;
  }
 

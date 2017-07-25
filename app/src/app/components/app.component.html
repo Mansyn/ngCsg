@@ -1,0 +1,50 @@
+<md-toolbar color="primary" class="header">
+  <button md-button class="txt-bold" routerLink="home">
+        HOME
+    </button>
+  <button md-button *ngFor="let link of navLinks | filterLink: 'section' : 'admin'" routerLink="{{link.section}}">
+        {{link.section | uppercase}}
+    </button>
+</md-toolbar>
+<section class="flex-container">
+  <md-sidenav-container class="sidenav-container" (window:resize)="onResize($event)">
+    <md-sidenav #sidenav class="sidenav" mode="side" [opened]="false">
+      <nav *ngFor="let link of navLinks | filterLink: 'section' : 'admin'">
+        <h3>{{link.section}}</h3>
+        <ul>
+          <li *ngFor="let page of link.pages">
+            <a routerLink="/{{link.section}}/{{page.link}}" class="p-l-15 p-r-15">{{page.link | titleCase}}</a>
+          </li>
+        </ul>
+      </nav>
+    </md-sidenav>
+    <div class="flex layout-column layout-align-start-start body-container">
+      <div class="w-100" [hidden]="isHidden()">
+        <md-toolbar color="accent">
+          <div class="m-r-15">
+            <button md-mini-fab color="primary" (click)="sidenav.toggle()">
+              <md-icon>menu</md-icon>
+            </button>
+          </div>
+          <div *ngFor="let part of currentPath(); let last = last">
+            {{part | uppercase}}
+            <md-icon *ngIf="!last" style="vertical-align: text-top;">chevron_right</md-icon>
+          </div>
+        </md-toolbar>
+      </div>
+      <router-outlet></router-outlet>
+      <footer>
+        <div class="layout-column layout-gt-xs-row">
+          <div class="flex-15 p-15">
+            <span class="logo cream">CSG</span>
+          </div>
+          <div class="flex-25">
+            513-932-6680 &mdash; Call us today!
+          </div>
+          <div class="flex-60 txt-right p-15">
+            Copyright &copy; 2017 Crisenbery Siding, All rights reserved
+          </div>
+        </div>
+      </footer>
+    </div>
+  </md-sidenav-container>

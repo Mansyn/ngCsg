@@ -6,7 +6,8 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { Ng2ImgToolsModule } from 'ng2-img-tools'; // image resizing tool
+import { Ng2ImgToolsModule } from 'ng2-img-tools';
+import { Ng2FileInputModule } from 'ng2-file-input';
 
 // components
 import { AppComponent } from './components/app.component';
@@ -55,7 +56,7 @@ import { FilterLink } from './pipes/filter-link.pipe';
     FormsModule,
     HttpModule,
     MaterialModule,
-    Ng2ImgToolsModule,
+    Ng2FileInputModule.forRoot(), Ng2ImgToolsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
@@ -69,6 +70,8 @@ import { FilterLink } from './pipes/filter-link.pipe';
       { path: 'contact/call', component: CallComponent },
       { path: 'contact/email', component: EmailComponent },
       { path: 'contact/facebook', component: FacebookComponent },
+      { path: 'admin', component: AdminComponent },
+      { path: 'admin/images', component: ImagesComponent },
       { path: '*', redirectTo: 'home' }
     ])
   ],

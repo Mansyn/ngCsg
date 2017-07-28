@@ -1,7 +1,20 @@
-<section class="layout-row wrap p-h-40 m-v-40">
-  <div class="mat-body-2">
+<section class="flex-100 layout-row wrap p-h-40 m-v-40">
+  <div class="flex-100 mat-body-2">
     <h2 class="mat-title allan">
       {{page.summary}}
     </h2>
+    <div class="m-b-25">
+      <ng2-file-input (onAction)="onAction($event)" [multiple]="false"></ng2-file-input>
+    </div>
+    <div class="layout-row">
+      <div class="flex-50">
+        Resized &amp; compressed:
+        <br />
+        <a [href]="fixedImageTrusted" target="_blank" *ngIf="fixedImage && fixedImage!=='processing'">
+            <img [src]="fixedImageTrusted" >
+          </a>
+        <md-spinner *ngIf="fixedImage==='processing'"></md-spinner>
+      </div>
+    </div>
   </div>
 </section>

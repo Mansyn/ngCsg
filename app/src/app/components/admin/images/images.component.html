@@ -3,16 +3,21 @@
     <h2 class="mat-title allan">
       {{page.summary}}
     </h2>
-    <div class="m-b-25">
+    <div>
       <ng2-file-input (onAction)="onAction($event)" [multiple]="false"></ng2-file-input>
     </div>
-    <div class="layout-row">
+    <div class="layout-row m-v-25" *ngIf="processing">
+      <div class="button-row">
+        <button md-raised-button (click)="saveImages()">Save Image(s)</button>
+      </div>
+    </div>
+    <div class="layout-row" *ngIf="processing">
       <div class="flex-50">
-        Resized &amp; compressed:
+        Resized:
         <br />
-        <a [href]="fixedImageTrusted" target="_blank" *ngIf="fixedImage && fixedImage!=='processing'">
-            <img [src]="fixedImageTrusted" >
-          </a>
+        <div *ngIf="fixedImage && fixedImage!=='processing'">
+          <img [src]="fixedImageTrusted">
+        </div>
         <md-spinner *ngIf="fixedImage==='processing'"></md-spinner>
       </div>
     </div>

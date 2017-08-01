@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { Ng2ImgToolsModule } from 'ng2-img-tools';
-import { Ng2FileInputModule } from 'ng2-file-input';
 
 // components
 import { AppComponent } from './components/app.component';
@@ -16,14 +14,13 @@ import { AboutComponent } from './components/about/about.component';
 import { FaqComponent } from './components/about/faq/faq.component';
 import { TestimonialsComponent } from './components/about/testimonials/testimonials.component';
 import { ServicesComponent } from './components/about/services/services.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
-import { FinishedComponent } from './components/gallery/finished/finished.component';
+import { WorkComponent } from './components/work/work.component';
+import { ProjectsComponent } from './components/work/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CallComponent } from './components/contact/call/call.component';
 import { EmailComponent } from './components/contact/email/email.component';
 import { FacebookComponent } from './components/contact/facebook/facebook.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { ImagesComponent } from './components/admin/images/images.component';
+import { GalleryComponent, GalleryDialog } from './components/shared/gallery.component';
 
 // services
 import { ReviewService } from './services/review.service';
@@ -40,23 +37,23 @@ import { FilterLink } from './pipes/filter-link.pipe';
     FaqComponent,
     TestimonialsComponent,
     ServicesComponent,
-    GalleryComponent,
-    FinishedComponent,
+    WorkComponent,
+    ProjectsComponent,
     ContactComponent,
     CallComponent,
     EmailComponent,
     FacebookComponent,
-    AdminComponent,
-    ImagesComponent,
+    GalleryComponent,
+    GalleryDialog,
     TitleCase,
     FilterLink
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     MaterialModule,
-    Ng2FileInputModule.forRoot(), Ng2ImgToolsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
@@ -64,17 +61,16 @@ import { FilterLink } from './pipes/filter-link.pipe';
       { path: 'about/faq', component: FaqComponent },
       { path: 'about/testimonials', component: TestimonialsComponent },
       { path: 'about/services', component: ServicesComponent },
-      { path: 'gallery', component: GalleryComponent },
-      { path: 'gallery/finished', component: FinishedComponent },
+      { path: 'work', component: WorkComponent },
+      { path: 'work/projects', component: ProjectsComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'contact/call', component: CallComponent },
       { path: 'contact/email', component: EmailComponent },
       { path: 'contact/facebook', component: FacebookComponent },
-      { path: 'admin', component: AdminComponent },
-      { path: 'admin/images', component: ImagesComponent },
       { path: '*', redirectTo: 'home' }
     ])
   ],
+  entryComponents: [GalleryDialog],
   providers: [ReviewService],
   bootstrap: [AppComponent]
 })

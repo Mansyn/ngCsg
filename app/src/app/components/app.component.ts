@@ -31,12 +31,12 @@ export class AppComponent {
       'summary': 'What our past clients have to say about our work'
     }]
   }, {
-    'section': 'gallery',
+    'section': 'work',
     'pages': [{
-      'link': 'finished',
+      'link': 'projects',
       'icon': 'view_carousel',
-      'headline': 'Finished Gallery',
-      'summary': 'View finished homes we\'ve previously worked on'
+      'headline': 'Past Projects',
+      'summary': 'View our past projects to see the quality of our work'
     }]
   }, {
     'section': 'contact',

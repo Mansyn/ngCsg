@@ -4,15 +4,16 @@ import { MdDialog } from '@angular/material';
 @Component({
 	selector: 'gallery',
 	template: `
-  	<ul id="thumbnailsList">
-  	   <li *ngFor="let image of datasource" >
-					<img src="{{image.url}}" class="tn" height="150" (click)=setSelectedImage(image)>
-  	   </li>
-  	</ul>
+		<div class="m-t-25">
+		<h5 class="mat-headline p-l-50">{{datasource[0].date}}</h5>
+		<md-grid-list cols="4" rowHeight="2:1">
+			<md-grid-tile *ngFor="let image of datasource">
+				<img src="{{image.url}}" class="tn" height="150" (click)=setSelectedImage(image)>
+			</md-grid-tile>
+		</md-grid-list>
+		</div>
   `,
 	styles: [`
-  	ul { padding:0; width:100%; margin:20px auto}
-  	li { display:inline;}
     .tn { margin:2px 0px; box-shadow:#999 1px 1px 3px 1px; cursor: pointer }
   `]
 })
@@ -20,6 +21,7 @@ export class GalleryComponent {
 	constructor(public dialog: MdDialog) { }
 
 	@Input() datasource;
+	date: string;
 
 	setSelectedImage(image) {
 		let dialogRef = this.dialog.open(GalleryDialog);

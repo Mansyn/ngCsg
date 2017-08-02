@@ -44,25 +44,20 @@ export class AppComponent {
       'link': 'call',
       'icon': 'phone',
       'headline': 'Contact By Phone',
-      'summary': 'Why not call us now?'
+      'summary': 'Why not call us now?',
+      'href': 'tel:513-932-6680'
     }, {
       'link': 'email',
       'icon': 'email',
       'headline': 'Contact By Email',
-      'summary': 'Send us a message and we will contact you'
+      'summary': 'Send us a message and we will contact you',
+      'href': 'mailto:steve@crisenberysiding.com?Subject=I\'d%20like%20to%20know%20more'
     }, {
       'link': 'facebook',
       'icon': 'face',
       'headline': 'On Facebook',
-      'summary': 'Find us on Facebook and keep up with our latest work'
-    }]
-  }, {
-    'section': 'admin',
-    'pages': [{
-      'link': 'images',
-      'icon': 'lock',
-      'headline': 'Import Images',
-      'summary': 'Upload and format images to import to gallery'
+      'summary': 'Find us on Facebook and keep up with our latest work',
+      'href': 'https://www.facebook.com/Crisenbery-Siding-Continuous-Gutters-162301023793528/'
     }]
   }];
 

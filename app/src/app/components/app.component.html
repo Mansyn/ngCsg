@@ -2,18 +2,19 @@
   <button md-button class="txt-bold" routerLink="home">
         HOME
     </button>
-  <button md-button *ngFor="let link of navLinks | filterLink: 'section' : 'admin'" routerLink="{{link.section}}">
+  <button md-button *ngFor="let link of navLinks" routerLink="{{link.section}}">
         {{link.section | uppercase}}
     </button>
 </md-toolbar>
 <section class="flex-container">
   <md-sidenav-container class="sidenav-container" (window:resize)="onResize($event)">
     <md-sidenav #sidenav class="sidenav" mode="side" [opened]="false">
-      <nav *ngFor="let link of navLinks | filterLink: 'section' : 'admin'">
+      <nav *ngFor="let link of navLinks">
         <h3>{{link.section}}</h3>
         <ul>
           <li *ngFor="let page of link.pages">
-            <a routerLink="/{{link.section}}/{{page.link}}" class="p-l-15 p-r-15">{{page.link | titleCase}}</a>
+            <a *ngIf="link.section != 'contact'" routerLink="/{{link.section}}/{{page.link}}" class="p-l-15 p-r-15">{{page.link | titleCase}}</a>
+            <a *ngIf="link.section == 'contact'" href="{{page.href}}" class="p-l-15 p-r-15">{{page.link | titleCase}}</a>
           </li>
         </ul>
       </nav>

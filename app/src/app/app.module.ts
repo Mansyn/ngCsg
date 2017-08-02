@@ -27,7 +27,7 @@ import { ReviewService } from './services/review.service';
 
 // pipes
 import { TitleCase } from './pipes/title-case.pipe';
-import { FilterLink } from './pipes/filter-link.pipe';
+import { FilterLink, NotFilterLink } from './pipes/filter-link.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { FilterLink } from './pipes/filter-link.pipe';
     GalleryComponent,
     GalleryDialog,
     TitleCase,
-    FilterLink
+    FilterLink,
+    NotFilterLink
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,6 @@
     <h2 class="mat-title allan">
       {{page.summary}}
     </h2>
-    <gallery [datasource]=images></gallery>
+    <gallery *ngFor="let imageSet of images" [datasource]=imageSet.set></gallery>
   </div>
 </section>
